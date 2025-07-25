@@ -114,7 +114,7 @@ Solution: This step requires high-performance compute (HPC) nodes or cloud insta
 
 7. ✅ Corrected by replacing .fastq inputs with proper .txt file listing evidence.
 
-8. ✅ Quality Control and Filtering of Genome.
+8. ✅ Quality Control and Filtering of files obtained from EviAnn annotation.
 
 9. ✅ Re-ran pipeline with improved input handling (pending eggNOG).
 
