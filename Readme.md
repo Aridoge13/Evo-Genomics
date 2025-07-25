@@ -2,8 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![GitHub issues](https://img.shields.io/github/issues/Aridoge13/Kabosu)
-![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
+![GitHub issues](https://img.shields.io/github/issues/Aridoge13/Evo-Genomics)
+![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Evo-Genomics)
 
 This repository documents the genome annotation and transcriptomic analysis pipeline for *Daphnia magna*, with all steps executed on a local Linux/WSL system. The workflow uses EviAnn for annotation and aims to scale toward transcript quantification, comparative genomics, and functional annotation using modern tools. 
 
