@@ -10,11 +10,7 @@ This repository documents the genome annotation and transcriptomic analysis pipe
 This pipeline is not specific to the *Daphnia magna* and can be used for evolutionary genomics study involving any species.
 
 ---
-## How to run EviAnn
-```bash
-./eviann.sh -g path/to/the/genome/fasta/sequence -r path/to/the/paired/reads/text/file -p path/to/the/proteome
 
-```
 ## Project Overview
 
 ```mermaid
@@ -73,6 +69,12 @@ Tested on Linux (Ubuntu). WSL or HPC systems are recommended for memory-intensiv
 
 > All tools are installed in Tools/ or via conda. See environment.yml for reproducibility.
 
+---
+## How to run EviAnn
+```bash
+./eviann.sh -g path/to/the/genome/fasta/sequence -r path/to/the/paired/reads/text/file -p path/to/the/proteome
+
+```
 ---
 
 ## Issues Faced
@@ -137,5 +139,5 @@ Solution: This step requires high-performance compute (HPC) nodes or cloud insta
 
 ## Contact
 **Aritra Mukherjee**
-- aritra.mukherjee98@gmail.com
-- July 2025
+- **Email**: aritra.mukherjee98@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/aritra-mukherjee-82b070125/
