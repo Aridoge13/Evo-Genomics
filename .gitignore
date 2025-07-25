@@ -1,0 +1,13 @@
+sra
+uniprot_sprot.fasta
+EviAnn-2.0.3.tar.gz
+bin
+dist-bin
+install.sh
+global-1
+PkgConfig.pm 
+intermediates
+logs
+annotation
+genes.gff
+inputs
