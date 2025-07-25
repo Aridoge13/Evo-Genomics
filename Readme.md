@@ -21,19 +21,34 @@ This pipeline is not specific to the *Daphnia magna* and can be used for evoluti
 
 flowchart TD
     A[Install EviAnn and Dependencies] --> B[Download & Prepare Inputs]
-    B --> C[Index Genome (hisat2-build)]
-    C --> D[Map RNA-seq Reads (hisat2)]
-    D --> E[Convert SAM to BAM & Sort (samtools)]
-    E --> F[Reconstruct Transcripts (stringtie)]
+    B --> C[Index Genome\nhisat2-build]
+    C --> D[Map RNA-seq Reads\nhisat2]
+    D --> E[Convert SAM to BAM & Sort\nsamtools]
+    E --> F[Reconstruct Transcripts\nstringtie]
     F --> G[Run EviAnn Pipeline]
     G --> H{Successful?}
     H -- No .gtf files --> I[Debug Transcript Merge Issue]
     I --> F
-    H -- Yes --> J[Predict Proteins (TransDecoder)]
+    H -- Yes --> J[Predict Proteins\nTransDecoder]
     J --> K[Quality Control & Filtering]
-    K --> L[Functional Annotation (eggNOG - pending)]
-    L --> M[Transcript Quantification (Salmon)] 
-    M --> N[Comparative Genomics & Visualization] 
+    K --> L[Functional Annotation\neggNOG - pending]
+    L --> M[Transcript Quantification\nSalmon] 
+    M --> N[Comparative Genomics & Visualization]
+%% Color definitions
+    style A fill:#d32f2f,stroke:#b71c1c,color:#ffffff
+    style B fill:#f57c00,stroke:#ff6f00,color:#ffffff
+    style C fill:#f57c00,stroke:#1b5e20,color:#ffffff
+    style D fill:#f57c00,stroke:#e65100,color:#ffffff
+    style E fill:#ffa000,stroke:#b71c1c,color:#ffffff
+    style F fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style G fill:#ffa000,stroke:#1b5e20,color:#ffffff
+    style H fill:#ffa000,stroke:#e65100,color:#ffffff
+    style I fill:#388e3c,stroke:#b71c1c,color:#ffffff
+    style J fill:#388e3c,stroke:#ff6f00,color:#ffffff
+    style K fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style L fill:#388e3c,stroke:#e65100,color:#ffffff
+    style M fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style N fill:#1976d2,stroke:#ff6f00,color:#ffffff
 ```
 
 ---
@@ -43,6 +58,7 @@ Tested on Linux (Ubuntu). WSL or HPC systems are recommended for memory-intensiv
 
 ### Dependencies
 |Tool|	Purpose|
+|----|---------|
 |EviAnn|	Genome annotation core pipeline|
 |SRA Toolkit|	FASTQ download from SRA|
 |SwissProt|	Homology reference DB|
@@ -109,6 +125,7 @@ Solution: This step requires high-performance compute (HPC) nodes or cloud insta
 ## Planned Pipeline Modules
 
 |Step | Completion status|
+|-----|------------------|
 |Functional Annotation| Currently developing & debugging|
 |Transcript Quantification| Upcoming|
 |Comparative Genomics| Upcoming|
