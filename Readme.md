@@ -7,7 +7,7 @@
 
 This repository documents the genome annotation and transcriptomic analysis pipeline for *Daphnia magna*, with all steps executed on a local Linux/WSL system. The workflow uses EviAnn for annotation and aims to scale toward transcript quantification, comparative genomics, and functional annotation using modern tools. 
 
-This pipeline is not specific to the *Daphnia magna* and can be used for evolutionary genomics study involving any species.
+This pipeline is not specific to *Daphnia magna* and can be used for evolutionary genomics study involving any species.
 
 ---
 
@@ -17,18 +17,18 @@ This pipeline is not specific to the *Daphnia magna* and can be used for evoluti
 
 flowchart TD
     A[Install EviAnn and Dependencies] --> B[Download & Prepare Inputs]
-    B --> C[Index Genome\nhisat2-build]
-    C --> D[Map RNA-seq Reads\nhisat2]
-    D --> E[Convert SAM to BAM & Sort\nsamtools]
-    E --> F[Reconstruct Transcripts\nstringtie]
+    B --> C[Index Genome using hisat2-build]
+    C --> D[Map RNA-seq Reads using hisat2]
+    D --> E[Convert SAM to BAM & Sort using samtools]
+    E --> F[Reconstruct Transcripts using stringtie]
     F --> G[Run EviAnn Pipeline]
     G --> H{Successful?}
     H -- No .gtf files --> I[Debug Transcript Merge Issue]
     I --> F
-    H -- Yes --> J[Predict Proteins\nTransDecoder]
+    H -- Yes --> J[Predict Proteins using Swissprot]
     J --> K[Quality Control & Filtering]
-    K --> L[Functional Annotation\neggNOG - pending]
-    L --> M[Transcript Quantification\nSalmon] 
+    K --> L[Functional Annotation eggNOG - pending]
+    L --> M[Transcript Quantification using Salmon] 
     M --> N[Comparative Genomics & Visualization]
 %% Color definitions
     style A fill:#d32f2f,stroke:#b71c1c,color:#ffffff
@@ -62,7 +62,6 @@ Tested on Linux (Ubuntu). WSL or HPC systems are recommended for memory-intensiv
 |samtools|	Format conversion, sorting|
 |stringtie|	Transcript reconstruction|
 |gffcompare|	GTF comparison and merging|
-|TransDecoder|	ORF prediction|
 |blastp|	Protein homology search|
 |makeblastdb|	BLAST database creation|
 |salmon|	Transcript quantification|
